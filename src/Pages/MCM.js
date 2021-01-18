@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import GenerateTestCase from "../functions/TestCase4579";
+import GenerateTestCase from "../functions/TestCase5";
 import { Table, Button } from "antd";
 import SaveTestCase from "../functions/saveTestCase";
 
