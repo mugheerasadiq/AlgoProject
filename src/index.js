@@ -5,6 +5,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route } from "react-router-dom";
 import LCS from "./Pages/LCS";
+import SCS from "./Pages/SCS";
+import ED from "./Pages/ED";
+import LIS from "./Pages/LIS";
+import MCM from "./Pages/MCM";
+import KP from "./Pages/KP";
+import RC from "./Pages/RC";
+import PP from "./Pages/PP";
+import CCP from "./Pages/CCP";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,14 +20,14 @@ ReactDOM.render(
       <switch>
         <Route exact path="/" component={() => <App />} />
         <Route exact path="/LCS" component={() => <LCS />} />
-        <Route exact path="/SCS" component={() => <LCS />} />
-        <Route exact path="/LIS" component={() => <LCS />} />
-        <Route exact path="/ED" component={() => <LCS />} />
-        <Route exact path="/MCM" component={() => <LCS />} />
-        <Route exact path="/KP" component={() => <LCS />} />
-        <Route exact path="/PP" component={() => <LCS />} />
-        <Route exact path="/RC" component={() => <LCS />} />
-        <Route exact path="/CCP" component={() => <LCS />} />
+        <Route exact path="/SCS" component={() => <SCS />} />
+        <Route exact path="/LIS" component={() => <LIS />} />
+        <Route exact path="/ED" component={() => <ED />} />
+        <Route exact path="/MCM" component={() => <MCM />} />
+        <Route exact path="/KP" component={() => <KP />} />
+        <Route exact path="/PP" component={() => <PP />} />
+        <Route exact path="/RC" component={() => <RC />} />
+        <Route exact path="/CCP" component={() => <CCP />} />
         <Route exact path="/WBP" component={() => <LCS />} />
       </switch>
     </BrowserRouter>
