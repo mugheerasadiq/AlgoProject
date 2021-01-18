@@ -13,6 +13,7 @@ import KP from "./Pages/KP";
 import RC from "./Pages/RC";
 import PP from "./Pages/PP";
 import CCP from "./Pages/CCP";
+import WBP from "./Pages/WBP";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -28,7 +29,7 @@ ReactDOM.render(
         <Route exact path="/PP" component={() => <PP />} />
         <Route exact path="/RC" component={() => <RC />} />
         <Route exact path="/CCP" component={() => <CCP />} />
-        <Route exact path="/WBP" component={() => <LCS />} />
+        <Route exact path="/WBP" component={() => <WBP />} />
       </switch>
     </BrowserRouter>
   </React.StrictMode>,

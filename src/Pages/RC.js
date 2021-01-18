@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import GenerateTestCase from "../functions/TestCase68";
-import { Table } from "antd";
+import { Table, Button } from "antd";
+import SaveTestCase from "../functions/saveTestCase";
 
 function rodCut(price, n) {
   console.log(price);
@@ -43,10 +44,12 @@ const RC = () => {
 
   const [dataSource, setDataSource] = useState([]);
   const [globalTestCase, setGlobalTestCase] = useState([]);
+  const [tempCase, settempCase] = useState(``);
 
   useEffect(() => {
     const updateSource = [...dataSource];
     const updateTestCase = [...globalTestCase];
+    let TempTestcase = ``;
 
     for (let i = 0; i < 10; i++) {
       let testcase = GenerateTestCase();
@@ -59,9 +62,12 @@ const RC = () => {
         Output: "",
         key: i,
       });
+
+      TempTestcase = `${TempTestcase} Weight: ${testcase[1]} Values: ${testcase[3]} \n`;
     }
     setGlobalTestCase(updateTestCase);
     setDataSource(updateSource);
+    settempCase(TempTestcase);
   }, []);
 
   return (
@@ -73,6 +79,16 @@ const RC = () => {
         <br />
         Total Rod length: 20
       </p>
+
+      <Button
+        style={{ marginLeft: 5, marginBottom: 10 }}
+        type="primary"
+        onClick={() => {
+          return SaveTestCase(tempCase, "RCTestCase.txt", "text/plain");
+        }}
+      >
+        Download Test Cases
+      </Button>
 
       <Table
         columns={columns}
