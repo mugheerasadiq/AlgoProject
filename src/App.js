@@ -1,6 +1,5 @@
 import "./App.css";
 import { Button, Row, Col } from "antd";
-import LCS from "./Pages/LCS";
 import { Link, Route } from "react-router-dom";
 
 function App() {
